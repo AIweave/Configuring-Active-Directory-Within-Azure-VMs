@@ -25,7 +25,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 ![Screen Shot 2023-07-24 at 7 40 43 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/0bc5e565-81c2-4ee6-8ece-7d327f6ed075)
 
-- Choosing "Networking" in the right column of page. Then, "Network Interface" in the middle of screen.
+- Choose "Networking" in the right column of page. Then, "Network Interface" in the middle of screen.
   
 ![Screen Shot 2023-07-24 at 7 37 38 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/7bc760e0-0813-4bc4-9d8a-2b4fe11791d5)
 
