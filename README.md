@@ -51,7 +51,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 ![Screen Shot 2023-07-24 at 6 04 34 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/7fefa1f5-b8d3-404a-8f0c-028094e786b5)
 
-- Check back at Client-1 to see the ping succeed. "Reply means success".
+- Check back at Client-1 to see the ping succeed. "Reply" means success.
 
 ![Screen Shot 2023-07-24 at 6 05 08 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/b8d22ce6-7cab-4c0a-b852-8df0cfe39507)
 
