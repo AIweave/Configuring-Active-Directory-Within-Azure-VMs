@@ -33,13 +33,43 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
     
 - Ensure Connectivity between the client and Domain Controller
   - Login to Client with Remote Desktop and ping DC’s private IP address with ping -t <ip address> (perpetual ping)
-  - If this the command fails, login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
-  - Check back at Client-1 to see the ping succeed
+
+ ![Screen Shot 2023-07-24 at 6 00 27 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/19836aba-f6e5-4745-9d36-7814bf6c3ec4)
+
+  - If this the command fails, login to the Domain Controller and enable ICMPv4 in on the local windows Firewall by following below:
+
+    *Inbound Rules -> Enable ICMPv4(s) (Protocols) by right clicking mouse for pop-up*
+ 
+![Screen Shot 2023-07-24 at 5 59 21 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/25a3eed3-4480-4bc5-9d47-e13acba24680)
+
+![Screen Shot 2023-07-24 at 6 04 34 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/7fefa1f5-b8d3-404a-8f0c-028094e786b5)
+
+  - Check back at Client-1 to see the ping succeed. "Reply means success".
+
+![Screen Shot 2023-07-24 at 6 05 08 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/b8d22ce6-7cab-4c0a-b852-8df0cfe39507)
+
 
 - Install Active Directory
-  - Login to DC-1 and install Active Directory Domain Services
-  - Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
-  - Restart and then log back into DC-1 as user: mydomain.com\labuser
+  - Login to DC-1 and install Active Directory Domain Services by selecting "Add Roles and features" in Server Manager Dashboard.
+ 
+![Screen Shot 2023-07-24 at 6 07 44 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/710d255c-3786-4747-997f-5dd99d508d71)
+
+  - Select "Active Directory Domain Services" under "Roles" drop list.
+
+![Screen Shot 2023-07-24 at 6 08 39 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/d65e0aae-7b8d-4e6b-b4fa-e4bd2421fa3b)
+
+  - Promote server manager to a domain controller by clicking the yellow flag on the top right side of screen.  When the pop-up window appears, select "Promote this server to a domain controller".
+
+  ![Screen Shot 2023-07-24 at 6 13 09 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/6ec0f580-eca3-42c5-9632-209ccd860593)
+
+  - Setup a new forest. Create a "Root domain name" and "Password".
+
+![Screen Shot 2023-07-24 at 6 14 13 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/4f51748d-5190-41fa-bdda-b892f070955d)
+
+  - Restart and then log back into DC using Root domain name\user as User login and its password previously created for Password. For an example, username: mydomain.com\labuser.
+
+![Screen Shot 2023-07-24 at 6 19 54 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/4be164f2-e50b-42f7-affe-74cbdebe6df5)
+
 
 - Create an Admin and Normal User Account in AD
   - In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
