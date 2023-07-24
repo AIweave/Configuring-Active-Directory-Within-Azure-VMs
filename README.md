@@ -21,7 +21,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - **Part 1: Setup Resources in Azure**
 - Create the Domain Controller VM (Windows Server 2022) named “DC”
-- Set Domain Controller’s NIC Private IP address to be "static" by clicking on DC in Azure.
+- Set Domain Controller’s NIC Private IP address to be "static" by clicking on the VM's name created in Azure. For an example, "DC" as shown below. 
 
 ![Screen Shot 2023-07-24 at 7 40 43 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/0bc5e565-81c2-4ee6-8ece-7d327f6ed075)
 
