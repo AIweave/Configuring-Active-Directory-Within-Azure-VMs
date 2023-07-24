@@ -70,15 +70,32 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 ![Screen Shot 2023-07-24 at 6 19 54 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/4be164f2-e50b-42f7-affe-74cbdebe6df5)
 
-
 - Create an Admin and Normal User Account in AD
-  - In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
-  - Create a new OU named “_ADMINS”
-  - Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
-  - Add jane_admin to the “Domain Admins” Security Group
-  - Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
-  - User jane_admin as your admin account from now on
+  - Type Active Directory Users and Computers (ADUC) in Windows search box located at the bottom of the screen.
+ 
+    ![Screen Shot 2023-07-24 at 6 35 34 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/3fc97147-547c-4452-9c24-e324ebe3bce4)
 
+  - Create the Organizational Units (OU) called “_EMPLOYEES” and "_ADMINS” by clicking on the Root Domain Name created from the Server Manager.  Then right click to create the "Organizational Unit“.
+ 
+![Screen Shot 2023-07-24 at 6 36 21 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/6fc2cf05-bc0e-4b45-91e4-b7dc193e61ed)
+
+![Screen Shot 2023-07-24 at 6 40 41 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/411dc7ed-5f35-4b8f-aacb-08a1674bbced)
+
+  - Create an administrator to be used when connecting the Client to the DC by right clicking "_ADMINS" in the left column. Selecting:
+
+    *New -> User*
+    
+![Screen Shot 2023-07-24 at 6 45 10 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/e44ed623-c8bf-4258-b2ec-8ce0280d3662)
+
+  - Add new administrator to the “Domain Admins” Security Group by right clicking their name.  Select "Properties". 
+
+    ![Screen Shot 2023-07-24 at 6 48 02 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/26cc425f-b100-4432-81e7-c4ca8984da89)
+
+    - Click "Add". Type "Domain Admins" in the entry box. Apply by pressing "OK".  
+
+![Screen Shot 2023-07-24 at 6 51 09 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/b1e10fa0-6cd2-48cf-925a-4ac3d8cddb42)
+
+  - Log out the Remote Desktop connection to DC and log back in as “mydomain.com\(admin username)”.
 
 - Join Client-1 to your domain (mydomain.com)
   - From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
@@ -86,12 +103,5 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
   - Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
   - Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
   - Create a new OU named “_CLIENTS” and drag Client-1 into there (Step is not really necessary, just for organizational purposes. I guess I skipped this in the lab!)
-
-
-- Setup Remote Desktop for non-administrative users on Client-1
-  - Log into Client-1 as mydomain.com\jane_admin and open system properties
-  - Click “Remote Desktop”
-  - Allow “domain users” access to remote desktop
-  - You can now log into Client-1 as a normal, non-administrative user now
 
 
