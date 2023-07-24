@@ -77,8 +77,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 ![Screen Shot 2023-07-24 at 6 19 54 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/4be164f2-e50b-42f7-affe-74cbdebe6df5)
 
-- Create an Admin and Normal User Account in AD
-- Type Active Directory Users and Computers (ADUC) in Windows search box located at the bottom of the screen.
+- Create an user account with administrative permissions by typing Active Directory Users and Computers (ADUC) in Windows search box located at the bottom of the screen.
  
 ![Screen Shot 2023-07-24 at 6 35 34 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/3fc97147-547c-4452-9c24-e324ebe3bce4)
 
