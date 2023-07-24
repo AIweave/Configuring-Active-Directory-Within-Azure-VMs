@@ -25,7 +25,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 ![Screen Shot 2023-07-24 at 7 40 43 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/0bc5e565-81c2-4ee6-8ece-7d327f6ed075)
 
-- Choose "Networking" in the left column of page. Then, "Network Interface" in the middle of screen.
+- Choose "Networking" in the left column of page, then, "Network Interface" in the middle of screen.
   
 ![Screen Shot 2023-07-24 at 7 37 38 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/7bc760e0-0813-4bc4-9d8a-2b4fe11791d5)
 
@@ -37,7 +37,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
   
 ![Screen Shot 2023-07-24 at 7 38 24 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/a2feb3a7-dffa-46d6-a85a-4ee85ba36e86)
 
-- Create a Client VM (Windows 10) named “Client”. Use the same Resource Group and Vnet that was created with the DC.
+- Create a Client VM (Windows 10) named “Client”.  Use the same Resource Group and Vnet that was created with the DC.
 - Ensure that both VMs are in the same Vnet.
 - Ensure Connectivity between the client and Domain Controller by logging into Client with Remote Desktop and ping DC’s private IP address with ping -t <ip address> (perpetual ping).
 
