@@ -20,7 +20,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 <h2>Instructions</h2>
 
 - **Part 1: Setup Resources in Azure**
-- Create the Domain Controller VM (Windows Server 2022) named “DC”
+- Create the Domain Controller VM (Windows Server 2022) named “DC”.
 - Set Domain Controller’s NIC Private IP address to be "static" by clicking on the VM's name created in Azure. For an example, "DC" as shown below. 
 
 ![Screen Shot 2023-07-24 at 7 40 43 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/0bc5e565-81c2-4ee6-8ece-7d327f6ed075)
@@ -29,7 +29,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
   
 ![Screen Shot 2023-07-24 at 7 37 38 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/7bc760e0-0813-4bc4-9d8a-2b4fe11791d5)
 
-- Select "IP Configurations" in the right column.
+- Select "IP Configurations" in the left column.
 
 ![Screen Shot 2023-07-24 at 7 38 09 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/353a3300-b534-49ea-9f53-6953d8aea16d)
 
@@ -37,8 +37,8 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
   
 ![Screen Shot 2023-07-24 at 7 38 24 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/a2feb3a7-dffa-46d6-a85a-4ee85ba36e86)
 
-- Create a Client VM (Windows 10) named “Client”. Use the same Resource Group and Vnet that was created with the DC
-- Ensure that both VMs are in the same Vnet
+- Create a Client VM (Windows 10) named “Client”. Use the same Resource Group and Vnet that was created with the DC.
+- Ensure that both VMs are in the same Vnet.
 - Ensure Connectivity between the client and Domain Controller by logging into Client with Remote Desktop and ping DC’s private IP address with ping -t <ip address> (perpetual ping).
 
 ![Screen Shot 2023-07-24 at 6 00 27 PM](https://github.com/AIweave/Configuring-Active-Directory-Within-Azure-VMs/assets/121763338/19836aba-f6e5-4745-9d36-7814bf6c3ec4)
